@@ -56,13 +56,13 @@ Node* mergeSortedLL(Node* head1, Node* head2){
          }
     }
 
-if(t1) {
+ if(t1) {
     temp->next = t1;
-}else{
+ }else{
     temp->next = t2;
-}
-
-return dummy->next;
+ }
+ 
+ return dummy->next;
 }
 
 void print(Node* head){
