@@ -3,13 +3,13 @@ using namespace std;
 
 
 class MergeSort
-{
+{  private:
     void merge(int arr[], int l, int m, int h) {
         vector<int> temp;
         int left = l;
         int right = m + 1;
 
-        while (left <= m && right <= h) {
+        while (left <= m && right <= h){
             if (arr[left] <= arr[right]) {
                 temp.push_back(arr[left]);
                 left++;
@@ -34,6 +34,7 @@ class MergeSort
         }
     }
 
+ public:
     void mergeSort(int arr[], int l, int h) {
         if (l < h) {
             int m = l + (h - l) / 2;
@@ -46,3 +47,19 @@ class MergeSort
 };
 
 
+
+
+int main() {
+    int arr[] = {1, 3, 4, 5, 6, 7, 2, 1};
+    int arr_size = sizeof(arr) / sizeof(arr[0]);
+
+    MergeSort ms;
+    ms.mergeSort(arr, 0, arr_size - 1);
+
+    cout << "Sorted array: ";
+    for (int i = 0; i < arr_size; i++)
+        cout << arr[i] << " ";
+    cout << endl;
+
+    return 0;
+}

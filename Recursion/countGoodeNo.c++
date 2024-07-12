@@ -28,8 +28,8 @@ const int MOD = 1e9 + 7;
 
         while (i < n) {
             if (i > j) {
-                result = (result * 2) % M;  // Add missing semicolon
-            }
+                result = (result * 2) % M;  
+                 }
 
             j = max(j, last_index[nums[i]]);
             i++;
