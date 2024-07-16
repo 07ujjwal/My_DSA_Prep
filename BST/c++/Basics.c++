@@ -22,8 +22,6 @@ class TreeNode{
 
 // array to binary tree....// recursive....
 
-
-
 TreeNode* insertIntoBST(TreeNode* root, int data) {
     if (root == nullptr) {
         root = new TreeNode(data);
